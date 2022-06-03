@@ -100,3 +100,11 @@ def squares_plot(a, b):
     plt.xlabel("Количество отрезков")
     plt.ylabel("Площадь фигуры")
     plt.show()
+
+
+def count_square(x, y):
+    square = 0
+    for i in range(len(x) - 1):
+        h = (y[i] + y[i + 1]) / 2
+        square += h * abs(x[i] - x[i + 1])
+    return square
